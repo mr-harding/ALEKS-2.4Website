@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--primaryColor);
+  font-family: 'PT Serif', serif;
+}
+
+:root {
+  --primaryColor: #0D2A59;
+  --secondaryColor: #F3BA44;
+  --primaryTextColor: #ffffff;
+  --secondaryTextColor: #1d1d1d;
+  --primaryBgColor: #DBDBDB;
+}
+
+body {
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+}
+
+img {
+  width: 25%;
+}
+
+.summary-text {
+  font-size: 16px;
+  color: var(--primaryTextColor);
+  margin: 60px 0;
+}
+
+.survey-choice-button {
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.survey-choice-button p {
+  font-size: 32px;
+  color: var(--primaryTextColor);
+  background: var(--secondaryColor);
+  border-radius: 2px;
+}
+
+.survey-choice-button a {
+  text-decoration: none;
+}
