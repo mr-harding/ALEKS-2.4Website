@@ -10,17 +10,17 @@
 <body>
   <button class="exit-button" onclick="exitAlert()">Exit</button>
 
-  <div class="question-text">
-    <h1>This is a Question</h1>
+  <div class="question-text" >
+    <h1 id="question"></h1>
   </div>
   <div class="example-text">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p id="description"></p>
   </div>
   <div class="answer-options">
-    <button onclick="readData(1, 1)">Strongly Disagree</button>
-    <button onclick="readData()">Disagree</button>
-    <button onclick="readData()">Agree</button>
-    <button onclick="readData()">Strongly Agree</button>
+    <button id="answer1" onclick="nextQuestion(1)"></button>
+    <button id="answer2" onclick="nextQuestion(2)"></button>
+    <button id="answer3" onclick="nextQuestion(3)"></button>
+    <button id="answer4" onclick="nextQuestion(4)"></button>
   </div>
 
 </body>

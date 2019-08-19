@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--primaryBgColor);
+  font-family: 'PT Serif', serif;
+}
+
+:root {
+  --primaryColor: #0D2A59;
+  --secondaryColor: #F3BA44;
+  --primaryTextColor: #ffffff;
+  --secondaryTextColor: #1d1d1d;
+  --primaryBgColor: #DBDBDB;
+}
