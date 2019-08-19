@@ -59,9 +59,9 @@ Http.onreadystatechange = (e) => {
 }
 
 function nextQuestion(value) {
-  if (x.values[counter][6] == 1) {
+  if (x.values[counter][6] == x.values[0][6]) {
     cat1Answers.push(value);
-  } else if (x.values[counter][6] == 2) {
+  } else if (x.values[counter][6] == x.values[1][6]) {
     cat2Answers.push(value);
   } else {
     cat3Answers.push(value);
