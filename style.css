@@ -18,7 +18,7 @@
 
 body {
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 /*
 .summary-button {
@@ -37,7 +37,7 @@ body {
 
 img {
   width: 290px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .summary-text {
@@ -48,7 +48,7 @@ img {
 }
 
 .survey-choice-button {
-  width: 18%;
+  width: 260px;
   margin: 0 auto;
 }
 
@@ -62,4 +62,25 @@ img {
 
 a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    width: 200px;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  img {
+    width: 180px;
+  }
+
+  .summary-text {
+    margin: 30px auto;
+  }
+
+  .survey-choice-button {
+    width: 220px;
+  }
 }

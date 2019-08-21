@@ -55,6 +55,7 @@ body {
   border: 0;
   font-size: 22px;
   padding: 10px 25px;
+  margin-bottom: 4px;
   color: var(--secondaryTextColor);
   border: 2px solid var(--secondaryTextColor);
   border-radius: 2px;
@@ -66,4 +67,44 @@ body {
   color: var(--primaryBgColor);
   transition: 0.3s;
   border-color: var(--primaryColor);
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    width: 95%;
+    margin: 20px auto 0 auto;
+  }
+
+  .exit-button {
+    margin-bottom: 30px;
+  }
+
+  .question-text {
+    font-size: 20px;
+  }
+
+  .example-text {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .example-text {
+    display: none;
+  }
+
+  .question-text {
+    margin-bottom: 30px;
+  }
+
+  .answer-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4px;
+    margin-left: 50px;
+    }
+
+  .answer-options button {
+    width: 200px;
+  }
 }
