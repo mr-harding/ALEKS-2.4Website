@@ -62,11 +62,13 @@ body {
   cursor: pointer;
 }
 
-.answer-options button:hover {
-  background: var(--primaryColor);
-  color: var(--primaryBgColor);
-  transition: 0.3s;
-  border-color: var(--primaryColor);
+@media (hover: hover) {
+  .answer-options button:hover {
+    background: var(--primaryColor);
+    color: var(--primaryBgColor);
+    transition: 0.3s;
+    border-color: var(--primaryColor);
+  }
 }
 
 @media only screen and (max-width: 500px) {
