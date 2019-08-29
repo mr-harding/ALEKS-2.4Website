@@ -88,6 +88,10 @@
     margin: 20px auto 0 auto;
   }
 
+  #progress-bar {
+    display: none;
+  }
+
   .exit-button {
     margin-bottom: 30px;
   }
