@@ -16,10 +16,21 @@
   --primaryBgColor: #DBDBDB;
 }
 
-body {
+.main {
   width: 80%;
   text-align: center;
   margin: 20px auto;
+}
+
+#progress-bar {
+  width: 100%;
+  background-color: var(--primaryColor);
+}
+
+#progress {
+  width: 0%;
+  height: 10px;
+  background-color: var(--secondaryColor);
 }
 
 .exit-button {

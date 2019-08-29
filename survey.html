@@ -8,19 +8,24 @@
   <title>Document</title>
 </head>
 <body>
-  <button class="exit-button" onclick="exitAlert()">Exit</button>
+  <div id="progress-bar">
+    <div id="progress"></div>
+  </div>
 
-  <div class="question-text" >
-    <h1 id="question"></h1>
-  </div>
-  <div class="example-text">
-    <p id="description"></p>
-  </div>
-  <div class="answer-options">
-    <button id="answer1" onclick="nextQuestion(1)"></button>
-    <button id="answer2" onclick="nextQuestion(2)"></button>
-    <button id="answer3" onclick="nextQuestion(3)"></button>
-    <button id="answer4" onclick="nextQuestion(4)"></button>
+  <div class="main">
+    <button class="exit-button" onclick="exitAlert()">Exit</button>
+    <div class="question-text" >
+      <h1 id="question"></h1>
+    </div>
+    <div class="example-text">
+      <p id="description"></p>
+    </div>
+    <div class="answer-options">
+      <button id="answer1" onclick="nextQuestion(1)"></button>
+      <button id="answer2" onclick="nextQuestion(2)"></button>
+      <button id="answer3" onclick="nextQuestion(3)"></button>
+      <button id="answer4" onclick="nextQuestion(4)"></button>
+    </div>
   </div>
 
 </body>

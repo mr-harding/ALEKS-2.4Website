@@ -47,6 +47,7 @@ var counterLimit;
 var cat1Answers = [];
 var cat2Answers = [];
 var cat3Answers = [];
+var width = 0;
 Http.onreadystatechange = (e) => {
   x = JSON.parse(Http.responseText);
   counterLimit = x.values.length;
@@ -77,6 +78,12 @@ function nextQuestion(value) {
   answer3.innerHTML = x.values[counter][3];
   answer4.innerHTML = x.values[counter][4];
   description.innerHTML = x.values[counter][5];
+
+  var progressBar = document.getElementById('progress');
+  var interval = 100 / counterLimit;
+  width += interval;
+  progressBar.style.width = width + "%";
+  progressBar.style.transitionDuration = "1s";
 }
 
 function summaryCalculation() {
