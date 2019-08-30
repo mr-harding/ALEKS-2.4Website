@@ -16,10 +16,33 @@
   --primaryBgColor: #DBDBDB;
 }
 
+#everything {
+  display: none;
+}
+
 .main {
   width: 80%;
   text-align: center;
   margin: 20px auto;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -37.5px 0 0 -37.5px;
+  border: 10px solid var(--primaryBgColor);
+  border-top: 10px solid var(--primaryColor);
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #progress-bar {

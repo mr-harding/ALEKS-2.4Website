@@ -48,6 +48,7 @@ var cat1Answers = [];
 var cat2Answers = [];
 var cat3Answers = [];
 var width = 0;
+
 Http.onreadystatechange = (e) => {
   x = JSON.parse(Http.responseText);
   counterLimit = x.values.length;
@@ -57,6 +58,16 @@ Http.onreadystatechange = (e) => {
   answer3.innerHTML = x.values[counter][3];
   answer4.innerHTML = x.values[counter][4];
   description.innerHTML = x.values[counter][5];
+}
+
+var myVar;
+function start() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("everything").style.display = "block";
 }
 
 function nextQuestion(value) {
