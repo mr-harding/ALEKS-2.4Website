@@ -62,12 +62,30 @@ Http.onreadystatechange = (e) => {
 
 var myVar;
 function start() {
-  myVar = setTimeout(showPage, 1000);
+  myVar = setTimeout(showPage, 1200);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("everything").style.display = "block";
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 function nextQuestion(value) {
