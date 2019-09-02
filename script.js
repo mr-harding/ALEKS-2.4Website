@@ -71,7 +71,6 @@ function showPage() {
 }
 
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
 
 function openModal() {
   modal.style.display = "block";
