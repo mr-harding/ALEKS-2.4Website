@@ -5,30 +5,30 @@ function exitAlert() {
   }
 }
 
-var users = [
-  {
-    username: "imaboss",
-    password: "99"
-  },
-  {
-    username: "jeff",
-    password: "bezos"
-  }
-]
+//var users = [
+//  {
+//    username: "imaboss",
+//    password: "99"
+//  },
+//  {
+//    username: "jeff",
+//    password: "bezos"
+//  }
+//]
 
-function getInfo() {
-  var username = document.getElementById('username').value
-  var password = document.getElementById('password').value
-  for (var i = 0; i < users.length; i++) {
-    if (username == users[i].username && password == users[i].password) {
-      window.location.href = "summary.html"
-      return
-    }
-  }
-  alert("Your details are incorrect");
-  document.getElementById('username').value = "";
-  document.getElementById('password').value = "";
-}
+//function getInfo() {
+//  var username = document.getElementById('username').value
+//  var password = document.getElementById('password').value
+//  for (var i = 0; i < users.length; i++) {
+//    if (username == users[i].username && password == users[i].password) {
+//      window.location.href = "summary.html"
+//      return
+//    }
+//  }
+//  alert("Your details are incorrect");
+//  document.getElementById('username').value = "";
+//  document.getElementById('password').value = "";
+//}
 
 const Http = new XMLHttpRequest();
 const url='https://sheets.googleapis.com/v4/spreadsheets/1QNXJ3V3G2MYV69tkhYZI68ry5u2RWbo0IHeLwzrggzo/values/Sheet1?key=AIzaSyB-oUfU9YzqxToTdIRrC7VvoruACZFrit8';
@@ -72,14 +72,9 @@ function showPage() {
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+function openModal() {
   modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
 }
 
 window.onclick = function(event) {
