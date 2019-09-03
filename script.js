@@ -37,6 +37,7 @@ Http.send();
 
 var x;
 var question = document.getElementById('question');
+var image = document.getElementById('image');
 var answer1 = document.getElementById('answer1');
 var answer2 = document.getElementById('answer2');
 var answer3 = document.getElementById('answer3');
@@ -58,6 +59,7 @@ Http.onreadystatechange = (e) => {
   answer3.innerHTML = x.values[counter][3];
   answer4.innerHTML = x.values[counter][4];
   description.innerHTML = x.values[counter][5];
+  image.src = x.values[counter][7];
 }
 
 var myVar;
@@ -101,6 +103,7 @@ function nextQuestion(value) {
   answer3.innerHTML = x.values[counter][3];
   answer4.innerHTML = x.values[counter][4];
   description.innerHTML = x.values[counter][5];
+  image.src = x.values[counter][7];
 
   var progressBar = document.getElementById('progress');
   var interval = 100 / counterLimit;

@@ -63,7 +63,7 @@
   border: 2px solid var(--secondaryTextColor);
   border-radius: 2px;
   cursor: pointer;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 .question-text {
@@ -71,10 +71,20 @@
   color: var(--secondaryTextColor);
 }
 
+.image {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.image img {
+  width: 30%;
+  text-align: center;
+}
+
 .example-text {
   font-size: 16px;
   color: var(--secondaryTextColor);
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .answer-options button {
@@ -119,10 +129,15 @@
   width: 75%;
 }
 
+.modal-content h1 {
+  padding-bottom: 15px;
+}
+
 #exit-notice {
   text-align: center;
   margin-top: 10px;
   font-weight: 700;
+  padding-top: 10px;
 }
 
 @media (hover: hover) {
