@@ -77,6 +77,14 @@
   padding: 80px 0;
 }
 
+.answer-options {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+  margin: 0 auto;
+}
+
 .answer-options button {
   font-size: 22px;
   padding: 10px 25px;
@@ -140,7 +148,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  body {
+  main {
     width: 95%;
     margin: 20px auto 0 auto;
   }
@@ -150,19 +158,28 @@
   }
 
   .exit-button {
-    margin-bottom: 30px;
+    display: none;
   }
 
   .question-text {
     font-size: 20px;
+    padding-top: 25px;
   }
 
   .example-text {
-    padding: 30px;
+    padding: 30px 0;
+    width: 100%;
   }
 
   .help {
     display: none;
+  }
+
+  .answer-options {
+    width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
   }
 }
 
@@ -174,15 +191,3 @@
   .question-text {
     margin-bottom: 30px;
   }
-
-  .answer-options {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 4px;
-    margin-left: 50px;
-    }
-
-  .answer-options button {
-    width: 200px;
-  }
-}

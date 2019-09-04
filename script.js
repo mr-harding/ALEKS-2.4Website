@@ -5,6 +5,27 @@ function exitAlert() {
   }
 }
 
+var myVar;
+function start() {
+  myVar = setTimeout(showPage, 1200);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("everything").style.display = "block";
+}
+
+var modal = document.getElementById("myModal");
+function openModal() {
+  modal.style.display = "block";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 const Http = new XMLHttpRequest();
 const url='https://sheets.googleapis.com/v4/spreadsheets/1QNXJ3V3G2MYV69tkhYZI68ry5u2RWbo0IHeLwzrggzo/values/Sheet1?key=AIzaSyB-oUfU9YzqxToTdIRrC7VvoruACZFrit8';
 Http.open("GET", url);
@@ -35,32 +56,10 @@ Http.onreadystatechange = (e) => {
   description.innerHTML = x.values[counter][5];
 }
 
-var myVar;
-function start() {
-  myVar = setTimeout(showPage, 1200);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("everything").style.display = "block";
-}
-
-var modal = document.getElementById("myModal");
-
-function openModal() {
-  modal.style.display = "block";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 function nextQuestion(value) {
-  if (x.values[counter][6] == x.values[0][6]) {
+  if (x.values[counter][6] == x.values[1][6]) {
     cat1Answers.push(value);
-  } else if (x.values[counter][6] == x.values[1][6]) {
+  } else if (x.values[counter][6] == x.values[2][6]) {
     cat2Answers.push(value);
   } else {
     cat3Answers.push(value);
@@ -102,11 +101,11 @@ function summaryCalculation() {
   cat3Average = sum / cat3Answers.length;
   var lowestScore;
   if (cat1Average < cat2Average && cat1Average < cat3Average) {
-    lowestScore = x.values[0][6];
-  } else if (cat2Average < cat3Average && cat2Average < cat1Average) {
     lowestScore = x.values[1][6];
-  } else if (cat3Average < cat1Average && cat3Average < cat2Average){
+  } else if (cat2Average < cat3Average && cat2Average < cat1Average) {
     lowestScore = x.values[2][6];
+  } else if (cat3Average < cat1Average && cat3Average < cat2Average){
+    lowestScore = x.values[3][6];
   } else {
     lowestScore = "More than one area";
   }
