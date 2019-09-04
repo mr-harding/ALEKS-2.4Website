@@ -5,31 +5,6 @@ function exitAlert() {
   }
 }
 
-//var users = [
-//  {
-//    username: "imaboss",
-//    password: "99"
-//  },
-//  {
-//    username: "jeff",
-//    password: "bezos"
-//  }
-//]
-
-//function getInfo() {
-//  var username = document.getElementById('username').value
-//  var password = document.getElementById('password').value
-//  for (var i = 0; i < users.length; i++) {
-//    if (username == users[i].username && password == users[i].password) {
-//      window.location.href = "summary.html"
-//      return
-//    }
-//  }
-//  alert("Your details are incorrect");
-//  document.getElementById('username').value = "";
-//  document.getElementById('password').value = "";
-//}
-
 const Http = new XMLHttpRequest();
 const url='https://sheets.googleapis.com/v4/spreadsheets/1QNXJ3V3G2MYV69tkhYZI68ry5u2RWbo0IHeLwzrggzo/values/Sheet1?key=AIzaSyB-oUfU9YzqxToTdIRrC7VvoruACZFrit8';
 Http.open("GET", url);
@@ -42,7 +17,7 @@ var answer2 = document.getElementById('answer2');
 var answer3 = document.getElementById('answer3');
 var answer4 = document.getElementById('answer4');
 var description = document.getElementById('description');
-var counter = 0
+var counter = 1;
 var counterLimit;
 var cat1Answers = [];
 var cat2Answers = [];
